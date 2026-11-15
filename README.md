@@ -24,7 +24,9 @@ Management data lived in spreadsheets and accounting exports, so everyday questi
 | Receivables | Ageing, collection risk and an arrears figure that survives scrutiny |
 | Payroll | Three-way reconciliation of hours, payroll and the cost book |
 | Cash | Budget vs. actual and a rolling 13-week cash-flow forecast |
-| CRM | Customer accounts, leads, quotes and service tickets with SLA exceptions |
+| CRM | Customer accounts, leads and service tickets with SLA exceptions, plus a timeline the team writes to |
+| Quotes | A costing engine: line-by-line cost build-up, margin that is never confused with markup, PDF documents and a quote lifecycle |
+| Data intake | Per-source file specifications derived from the loaders; rejected rows are quarantined with the reason |
 | Risk & compliance | Risk register with heatmap, licence expiry, contract coverage |
 | Equipment | Asset register and a structured inspection programme |
 | Improvement | Mapped opportunities with cost, annual value and ROI, on a monthly cycle |
@@ -36,9 +38,9 @@ Management data lived in spreadsheets and accounting exports, so everyday questi
 |---|---|
 | Codebase | ~64,000 lines (TypeScript, SQL, Python) |
 | Application | 50 pages · 7 roles |
-| Database | 28 versioned migrations; integrity enforced in the schema |
-| Quality | 45 test suites · typecheck, lint, test and build in CI on every pull request |
-| Delivery | 190+ commits, 35+ pull requests, from first commit to production in weeks |
+| Database | 42 versioned migrations; integrity enforced in the schema |
+| Quality | 51 test suites · typecheck, lint, test and build in CI on every pull request |
+| Delivery | 190+ commits and 30+ pull requests, from first commit to production in weeks |
 
 ## Architecture
 
