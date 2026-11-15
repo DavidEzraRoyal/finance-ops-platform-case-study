@@ -7,7 +7,7 @@
 
 ## The problem
 
-The group ran on spreadsheets and accounting exports. Basic management questions had no defensible answer:
+Management data lived in spreadsheets and accounting exports, so everyday questions took manual work to answer with confidence:
 
 - **Which sites actually make money**, and where does margin leak?
 - **What do receivables really look like** once accounting corrections are applied?
@@ -66,7 +66,7 @@ CI/CD        GitHub Actions against a disposable Postgres · Vercel deployments
 
 ## A few real problems solved
 
-- **Migrations that had never really run in production.** I found an unterminated comment in a baseline migration and an identity-sequence overflow caused by JavaScript float rounding (`9223372036854776000` vs `…775807`). I then applied the missing migrations from inside the production runtime without ever exposing the database credential.
+- **Database migrations made reliable end to end.** Fixed edge cases in schema migrations (including a numeric-precision issue with very large identity values) and built a safe way to apply them without handling database credentials directly.
 - **Real accounting data that breaks naive models.** Negative monthly revenue from genuine corrections required changing the constraint, not clamping the data.
 - **Duplicate master data.** Fixed at the business key in the schema, not patched in the UI.
 
